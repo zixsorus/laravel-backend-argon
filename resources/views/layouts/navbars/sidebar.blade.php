@@ -14,7 +14,7 @@
                 <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="media align-items-center">
                         <span class="avatar avatar-sm rounded-circle">
-                        <img alt="Image placeholder" src="{{ asset('argon') }}/img/theme/team-2-800x800.jpg">
+                            <img alt="Image placeholder" src="{{ asset('argon') }}/img/theme/team-2-800x800.jpg">
                         </span>
                     </div>
                 </a>
@@ -116,6 +116,11 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{{ route('tables') }}">
+                        <i class="fas fa-table text-danger"></i> {{ __('Tables') }}
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#">
                         <i class="ni ni-key-25 text-info"></i> {{ __('Login') }}
                     </a>
@@ -138,17 +143,17 @@
             <!-- Navigation -->
             <ul class="navbar-nav mb-md-3">
                 <li class="nav-item">
-                    <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html">
+                    <a class="nav-link" target="_blank" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html">
                         <i class="ni ni-spaceship"></i> Getting started
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.html">
+                    <a class="nav-link" target="_blank" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.html">
                         <i class="ni ni-palette"></i> Foundation
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.html">
+                    <a class="nav-link" target="_blank" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.html">
                         <i class="ni ni-ui-04"></i> Components
                     </a>
                 </li>
