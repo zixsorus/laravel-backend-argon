@@ -27,22 +27,35 @@ Laravel has the most extensive and thorough [documentation](https://laravel.com/
 
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## Prerequisites
+If you don't already have an Apache local environment with PHP and MySQL, use one of the following links:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+1. Windows: https://updivision.com/blog/post/beginner-s-guide-to-setting-up-your-local-development-environment-on-windows
+2. Linux: https://howtoubuntu.org/how-to-install-lamp-on-ubuntu
+3. Mac: https://wpshout.com/quick-guides/how-to-install-mamp-on-your-mac/
+4. Also, you will need to install Composer: https://getcomposer.org/doc/00-intro.md
 
-### Premium Partners
+And Laravel: https://laravel.com/docs/7.x/installation
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+## Installation
+After initializing a fresh instance of Laravel (and making all the necessary configurations), install the preset using one of the provided methods:
+
+## Via composer
+- Cd to your Laravel app
+- Type in your terminal: <code>composer update</code>
+- Duplicate .env.example to .env
+- Type in terminal: <code>php artisan key:generate</code>
+- Edit you db in .env
+```  
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=
+```
+- In your terminal run <code>composer dump-autoload</code>
+- Run <code>php artisan migrate --seed</code> to create basic users table
 
 ## Contributing
 
