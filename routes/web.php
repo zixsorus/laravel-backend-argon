@@ -32,5 +32,5 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 Route::get('/tables',function(){
-	return view('tables.table');
+	return view('layouts.tables.table');
 })->name('tables');

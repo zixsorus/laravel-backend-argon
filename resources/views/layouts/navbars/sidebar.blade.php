@@ -91,7 +91,7 @@
 
                     <div class="collapse show" id="navbar-examples">
                         <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
+                            <li class="nav-item active">
                                 <a class="nav-link" href="{{ route('profile.edit') }}">
                                     {{ __('User profile') }}
                                 </a>
@@ -106,6 +106,22 @@
                 </li>
 
                 <li class="nav-item">
+                    <a class="nav-link" href="#navbar-tables" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-tables">
+                        <i class="ni ni-align-left-2 text-default"></i>
+                        <span class="nav-link-text"> {{ __('Tables') }} Tables</span>
+                    </a>
+                    <div class="collapse" id="navbar-tables">
+                        <ul class="nav nav-sm flex-colum">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('tables') }}">
+                                {{ __('Tables') }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item">
                     <a class="nav-link" href="#">
                         <i class="ni ni-planet text-blue"></i> {{ __('Icons') }}
                     </a>
@@ -113,11 +129,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">
                         <i class="ni ni-pin-3 text-orange"></i> {{ __('Maps') }}
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('tables') }}">
-                        <i class="fas fa-table text-danger"></i> {{ __('Tables') }}
                     </a>
                 </li>
                 <li class="nav-item">
