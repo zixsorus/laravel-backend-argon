@@ -6,7 +6,7 @@
         </button>
         <!-- Brand -->
         <a class="navbar-brand pt-0" href="{{ route('home') }}">
-            <img src="{{ asset('argon') }}/img/brand/blue.png" class="navbar-brand-img" alt="...">
+            <img src="{{ asset('argon') }}/img/brand/black.png" class="navbar-brand-img" alt="...">
         </a>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
@@ -78,20 +78,20 @@
             </form>
             <!-- Navigation -->
             <ul class="navbar-nav">
-                <li class="nav-item">
+                <li class="nav-item {{ request()->is('home') ? 'active' : '' }}">
                     <a class="nav-link" href="{{ route('home') }}">
                         <i class="ni ni-tv-2 text-primary"></i> {{ __('Dashboard') }}
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
+                    <a class="nav-link" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-examples">
                         <i class="fab fa-laravel" style="color: #f4645f;"></i>
                         <span class="nav-link-text" style="color: #f4645f;">{{ __('Laravel Examples') }}</span>
                     </a>
 
-                    <div class="collapse show" id="navbar-examples">
+                    <div class="collapse" id="navbar-examples">
                         <ul class="nav nav-sm flex-column">
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ route('profile.edit') }}">
                                     {{ __('User profile') }}
                                 </a>
@@ -105,16 +105,16 @@
                     </div>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#navbar-tables" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-tables">
+                <li class="nav-item {{ request()->is('tables') ? 'active' : '' }}">
+                    <a class="nav-link" href="#navbar-tables" data-toggle="collapse" role="button" aria-expanded="{{ request()->is('tables') ? 'true' : '' }}" aria-controls="navbar-tables">
                         <i class="ni ni-align-left-2 text-default"></i>
-                        <span class="nav-link-text"> {{ __('Tables') }} Tables</span>
+                        <span class="nav-link-text"> {{ __('Tables') }} </span>
                     </a>
-                    <div class="collapse" id="navbar-tables">
+                    <div class="collapse {{ request()->is('tables') ? 'show' : '' }}" id="navbar-tables">
                         <ul class="nav nav-sm flex-colum">
-                            <li class="nav-item">
+                            <li class="nav-item {{ request()->is('tables') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('tables') }}">
-                                {{ __('Tables') }}
+                                    {{ __('Tables') }}
                                 </a>
                             </li>
                         </ul>
@@ -142,10 +142,16 @@
                     </a>
                 </li>
                 <li class="nav-item mb-5 mr-4 ml-4 pl-1 bg-danger" style="position: absolute; bottom: 0;">
+                    <a class="nav-link text-white" href="{{ route('logout') }}" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                        <i class="ni ni-circle-08"></i> {{ __('Logout') }}
+                    </a>
+                </li>
+                <!-- <li class="nav-item mb-5 mr-4 ml-4 pl-1 bg-danger" style="position: absolute; bottom: 0;">
                     <a class="nav-link text-white" href="https://www.creative-tim.com/product/argon-dashboard-pro-laravel" target="_blank">
                         <i class="ni ni-cloud-download-95"></i> Upgrade to PRO
                     </a>
-                </li>
+                </li> -->
             </ul>
             <!-- Divider -->
             <hr class="my-3">
