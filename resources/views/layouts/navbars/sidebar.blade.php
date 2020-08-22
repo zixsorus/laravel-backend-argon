@@ -84,19 +84,19 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-examples">
+                    <a class="nav-link" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="{{ request()->is('profile','user') ? 'true' : '' }}" aria-controls="navbar-examples">
                         <i class="fab fa-laravel" style="color: #f4645f;"></i>
                         <span class="nav-link-text" style="color: #f4645f;">{{ __('Laravel Examples') }}</span>
                     </a>
 
-                    <div class="collapse" id="navbar-examples">
+                    <div class="collapse {{ request()->is('profile','user') ? 'show' : '' }}" id="navbar-examples">
                         <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
+                            <li class="nav-item {{ request()->is('profile') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('profile.edit') }}">
                                     {{ __('User profile') }}
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item {{ request()->is('user') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('user.index') }}">
                                     {{ __('User Management') }}
                                 </a>

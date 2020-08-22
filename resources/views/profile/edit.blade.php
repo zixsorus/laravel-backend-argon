@@ -1,5 +1,5 @@
 @extends('layouts.app', ['title' => __('User Profile')])
-
+@section('title',__('User Profile'))
 @section('content')
     @include('users.partials.header', [
         'title' => __('Hello') . ' '. auth()->user()->name,

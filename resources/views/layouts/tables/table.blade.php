@@ -8,13 +8,13 @@
         <div class="col">
             <div class="card">
                 <!-- card header -->
-                <div class="card-header border-0">
+                <div class="card-header border-0 theme-dark">
                     <h3 class="mb-0">Light table</h3>
                 </div>
                 <!-- table -->
                 <div class="table-responsive">
                     <div>
-                        <table class="table align-items-center">
+                        <table class="table align-items-center table-dark">
                             <thead class="thead-light">
                                 <tr>
                                     <th scope="col" class="sort" data-sort="name">Project</th>
