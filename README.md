@@ -56,6 +56,7 @@ DB_PASSWORD=
 ```
 - In your terminal run <code>composer dump-autoload</code>
 - Run <code>php artisan migrate --seed</code> to create basic users table
+- Run <code>php artisan storage:link</code> to create the storage symlink 
 
 ## Contributing
 
