@@ -16,6 +16,17 @@ class UserController extends Controller
      */
     public function index(User $model)
     {
-        return view('users.index');
+        $data = user::all();
+        return view('users.index', compact('data'));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        return view('users.create');
     }
 }
