@@ -15,6 +15,14 @@
                             <a href="{{route('user.create')}} " class="btn btn-primary">Add user</a>
                         </div>
                     </div>
+                    @if (session('status'))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{ session('status') }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    @endif
                 </div>
 
                 <div class="col-12">
@@ -40,11 +48,13 @@
                                 <td>{{$row->created_at}}</td>
                                 <td class="text-right">
                                     <div class="dropdown">
-                                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="fas fa-ellipsis-v"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                            <a class="dropdown-item" href="">Edit</a>
+                                        <a class="dropdown-item" href="">Edit</a>
+                                            <a class="dropdown-item" href="">Delete</a>
                                         </div>
                                     </div>
                                 </td>
