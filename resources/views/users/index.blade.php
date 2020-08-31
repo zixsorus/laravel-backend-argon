@@ -31,13 +31,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($data as $row)
+                            @foreach($data as $row)
                             <tr>
                                 <th scope="row">{{$row->name}}</td>
                                 <td>
                                     <a href="mailto:{{$row->email}} ">{{$row->email}} </a>
                                 </td>
-                                <td>{{$row->create_at}}</td>
+                                <td>{{$row->created_at}}</td>
                                 <td class="text-right">
                                     <div class="dropdown">
                                         <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

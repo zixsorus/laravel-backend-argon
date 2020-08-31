@@ -18,8 +18,8 @@
                 </div>
 
                 <div class="card-body">
-                    <form action="" method="post">
-                        @csrf @method('post')
+                    <form action="{{ route('user.update') }}" method="post">
+                        @csrf @method('put')
                         <h6 class="heading-small text-muted mb-4">User Information</h6>
                         <div class="pl-lg-4">
                             <div class="form-group">

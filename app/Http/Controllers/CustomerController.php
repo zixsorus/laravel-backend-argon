@@ -2,23 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use App\Customer;
 use Illuminate\Http\Request;
-use App\Http\Requests\UserRequest;
-use Illuminate\Support\Facades\Hash;
 
-class UserController extends Controller
+class CustomerController extends Controller
 {
     /**
-     * Display a listing of the users
+     * Display a listing of the resource.
      *
-     * @param  \App\User  $model
-     * @return \Illuminate\View\View
+     * @return \Illuminate\Http\Response
      */
-    public function index(User $model)
+    public function index()
     {
-        $data = user::all();
-        return view('users.index', compact('data'));
+        //
     }
 
     /**
@@ -28,7 +24,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('users.create');
+        //
     }
 
     /**
@@ -48,7 +44,7 @@ class UserController extends Controller
      * @param  \App\Customer  $customer
      * @return \Illuminate\Http\Response
      */
-    public function show(User $customer)
+    public function show(Customer $customer)
     {
         //
     }
@@ -59,10 +55,9 @@ class UserController extends Controller
      * @param  \App\Customer  $customer
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Customer $customer)
     {
         //
-        
     }
 
     /**
@@ -72,7 +67,7 @@ class UserController extends Controller
      * @param  \App\Customer  $customer
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $customer)
+    public function update(Request $request, Customer $customer)
     {
         //
     }
@@ -83,7 +78,7 @@ class UserController extends Controller
      * @param  \App\Customer  $customer
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $customer)
+    public function destroy(Customer $customer)
     {
         //
     }

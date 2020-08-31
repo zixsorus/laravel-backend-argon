@@ -8,8 +8,7 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title')</title>
-    <!-- <title>{{ config('app.name', 'Digital Skill Dashboard') }}</title> -->
+    <title>{{ config('app.name') }}</title>
     <!-- Favicon -->
     <link href="{{ asset('argon') }}/img/brand/favicon2.png" rel="icon" type="image/png">
     <!-- Fonts -->
