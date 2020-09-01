@@ -14,7 +14,7 @@
                 <!-- table -->
                 <div class="table-responsive">
                     <div>
-                        <table class="table align-items-center table-dark">
+                        <table class="table align-items-center">
                             <thead class="thead-light">
                                 <tr>
                                     <th scope="col" class="sort" data-sort="name">Project</th>

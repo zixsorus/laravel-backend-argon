@@ -28,4 +28,4 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 });
 
-Route::view('/tables','layouts.tables.table')->name('tables');
+Route::view('/tables','tables.table')->name('tables');
