@@ -16,11 +16,11 @@
     <!-- Icons -->
     <link href="{{ asset('argon') }}/vendor/nucleo/css/nucleo.css" rel="stylesheet">
     {{-- <link href="{{ asset('argon') }}/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet"> --}}
-    <link type="text/css" rel="stylesheet" href="{{ mix('css/app.css') }}">
     <!-- Sweetalert2 -->
     <script src="{{ asset('argon') }}\vendor\sweetalert2\dist\sweetalert2.all.js"></script>
     <!-- Argon CSS -->
     <link type="text/css" href="{{ asset('argon') }}/css/argon.css?v=1.0.0" rel="stylesheet">
+    <link type="text/css" href="{{ mix('css/app.css') }}" rel="stylesheet">
     
 </head>
 
